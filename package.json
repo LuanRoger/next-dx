@@ -13,9 +13,16 @@
     "prepare": "lefthook install"
   },
   "dependencies": {
+    "@next-safe-action/adapter-react-hook-form": "^2.0.6",
+    "lucide-react": "^1.14.0",
+    "motion": "^12.38.0",
     "next": "16.2.4",
+    "next-safe-action": "^8.5.2",
+    "next-themes": "^0.4.6",
+    "nuqs": "^2.8.9",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "react-hook-form": "^7.74.0",
     "varlock": "^0.9.1"
   },
   "devDependencies": {
@@ -27,7 +34,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "lefthook": "^2.1.6",
     "tailwindcss": "^4",
-    "typescript": "^5",
+    "typescript": "^6",
     "ultracite": "^7.6.2"
   }
 }
