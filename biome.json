@@ -11,11 +11,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": [
-      "**",
-      "!**/*.d.ts",
-      "!**/ui"
-    ]
+    "includes": ["!**/*.d.ts", "!**/ui"]
   },
   "linter": {
     "rules": {
