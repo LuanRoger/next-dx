@@ -9,6 +9,7 @@
     "format": "biome format --write",
     "check": "ultracite check",
     "fix": "ultracite fix",
+    "env:load": "varlock load",
     "prepare": "lefthook install"
   },
   "dependencies": {
