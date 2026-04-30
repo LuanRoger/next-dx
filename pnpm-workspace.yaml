@@ -1,0 +1,4 @@
+packages:
+  - .
+overrides:
+  "@next/env": "npm:@varlock/nextjs-integration"
