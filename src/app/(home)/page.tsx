@@ -14,7 +14,7 @@ import {
 export default function Page() {
   return (
     <div className="flex h-screen flex-col items-center justify-center">
-      <Card className="w-4xl">
+      <Card className="w-full lg:max-w-4xl">
         <CardHeader>
           <CardTitle>Next.js DX</CardTitle>
           <CardDescription>

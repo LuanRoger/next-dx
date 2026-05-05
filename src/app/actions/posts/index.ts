@@ -4,8 +4,9 @@ import { updateTag } from "next/cache";
 import { ENV } from "varlock/env";
 import { delay } from "@/lib/delay";
 import { actionClient } from "@/lib/safe-actions";
+import { getPostsResultSchema } from "./schemas";
 
-export const getPostsText = actionClient.action(async () => {
+export const getPosts = actionClient.action(async () => {
   const baseUrl = ENV.JSON_PLACEHOLDER_URL;
 
   const result = await fetch(`${baseUrl}/posts`);
@@ -13,7 +14,11 @@ export const getPostsText = actionClient.action(async () => {
 
   const lastUpdate = new Date().toLocaleTimeString();
 
-  return { result: await result.text(), lastUpdate };
+  const parsedJson = await result.json();
+  const parsedResult = getPostsResultSchema.parse(parsedJson);
+  const resultSample = parsedResult.slice(0, 10);
+
+  return { result: resultSample, lastUpdate };
 });
 
 export const refreshPosts = actionClient.action(async () => {

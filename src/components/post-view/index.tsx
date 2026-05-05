@@ -1,12 +1,12 @@
-import { cacheLife, cacheTag } from "next/cache";
-import { getPostsText } from "@/app/actions/posts";
+import { cacheTag } from "next/cache";
+import { getPosts } from "@/app/actions/posts";
+import PostsList from "./components/posts-list";
 
 export default async function PostView() {
   "use cache";
   cacheTag("posts");
-  cacheLife("hours");
 
-  const posts = await getPostsText();
+  const posts = await getPosts();
 
   const errorMessage = "Failed to fetch posts. Please try again later.";
   const hasError = !posts.data || posts.validationErrors;
@@ -20,9 +20,7 @@ export default async function PostView() {
       <p className="font-mono text-muted-foreground">
         Last updated: {lastUpdate}
       </p>
-      <pre className="max-h-96 overflow-scroll rounded-md bg-black p-4">
-        <span>{result}</span>
-      </pre>
+      <PostsList posts={result} />
     </div>
   );
 }
