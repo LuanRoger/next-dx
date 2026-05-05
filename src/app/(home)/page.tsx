@@ -1,5 +1,7 @@
-import { RefreshCcwIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Suspense } from "react";
+import PostView from "@/components/post-view";
+import PostViewLoading from "@/components/post-view/loading";
+import { ReloadPostsButton } from "@/components/reload-posts-button";
 import {
   Card,
   CardContent,
@@ -20,13 +22,12 @@ export default function Page() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <pre className="rounded-md bg-black p-4">No content.</pre>
+          <Suspense fallback={<PostViewLoading />}>
+            <PostView />
+          </Suspense>
         </CardContent>
         <CardFooter>
-          <Button>
-            <RefreshCcwIcon />
-            Reload
-          </Button>
+          <ReloadPostsButton />
         </CardFooter>
       </Card>
     </div>
