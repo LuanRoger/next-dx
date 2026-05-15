@@ -10,8 +10,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { pageSearchParamsLoader } from "./search-params";
 
-export default function Page() {
+export default async function Page({ searchParams }: PageProps<"/">) {
+  const { userId } = await pageSearchParamsLoader(searchParams);
+
   return (
     <div className="flex h-screen flex-col items-center justify-center">
       <Card className="w-full lg:max-w-4xl">
@@ -23,7 +26,7 @@ export default function Page() {
         </CardHeader>
         <CardContent>
           <Suspense fallback={<PostViewLoading />}>
-            <PostView />
+            <PostView userId={userId ?? undefined} />
           </Suspense>
         </CardContent>
         <CardFooter>
