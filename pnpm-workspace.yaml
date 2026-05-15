@@ -1,4 +1,8 @@
 packages:
   - .
+allowBuilds:
+  lefthook: true
+  msw: true
+  sharp: true
 overrides:
   "@next/env": "npm:@varlock/nextjs-integration"
