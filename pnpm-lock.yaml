@@ -90,6 +90,9 @@ importers:
       lefthook:
         specifier: ^2.1.6
         version: 2.1.6
+      skills:
+        specifier: ^1.5.7
+        version: 1.5.7
       tailwindcss:
         specifier: ^4.3.0
         version: 4.3.0
@@ -2780,6 +2783,11 @@ packages:
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+
+  skills@1.5.7:
+    resolution: {integrity: sha512-Df/2bXm/5Glp7o6n2Ft5v5EmowaD0x8lbvDwionoIhS1sxnWTy5KwMsMPlu3fqhfIZj95m7CC4p+jNVkXNQGYQ==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -5705,6 +5713,10 @@ snapshots:
   signal-exit@4.1.0: {}
 
   sisteransi@1.0.5: {}
+
+  skills@1.5.7:
+    dependencies:
+      yaml: 2.9.0
 
   source-map-js@1.2.1: {}
 
