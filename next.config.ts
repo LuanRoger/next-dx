@@ -1,3 +1,4 @@
+import { varlockNextConfigPlugin } from "@varlock/nextjs-integration/plugin";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -5,4 +6,4 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
 };
 
-export default nextConfig;
+export default varlockNextConfigPlugin()(nextConfig);
