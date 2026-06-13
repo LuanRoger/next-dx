@@ -5,11 +5,3 @@ import { afterEach } from "vitest";
 afterEach(() => {
   cleanup();
 });
-
-class ResizeObserver {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-}
-
-window.ResizeObserver = ResizeObserver;
