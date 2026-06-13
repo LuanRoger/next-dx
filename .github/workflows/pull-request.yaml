@@ -21,6 +21,18 @@ jobs:
       - run: pnpm install
       - run: pnpm run check
 
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Lint
+        uses: pnpm/action-setup@v6
+
+      - run: pnpm install
+      - run: pnpm run test
+
   build:
     runs-on: ubuntu-latest
 
