@@ -6,7 +6,8 @@
     "ultracite/biome/react"
   ],
   "files": {
-    "includes": ["!**/*.d.ts", "!**/ui"]
+    "ignoreUnknown": true,
+    "includes": ["!**/node_modules", "!**/*.d.ts", "!**/ui"]
   },
   "linter": {
     "rules": {
