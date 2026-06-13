@@ -3,7 +3,6 @@ import { useAction } from "next-safe-action/hooks";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { ReloadPostsButton } from "./index";
 
-// Mock the useAction hook
 vi.mock("next-safe-action/hooks", () => ({
   useAction: vi.fn(),
 }));
@@ -14,11 +13,20 @@ describe("ReloadPostsButton Component", () => {
   });
 
   it("should render button with reload text", () => {
-    // Mock useAction to return default values
     vi.mocked(useAction).mockReturnValue({
       execute: vi.fn(),
-      isPending: false,
+      executeAsync: vi.fn(),
+      input: undefined,
+      reset: vi.fn(),
+      isTransitioning: false,
+      status: "idle",
+      isIdle: true,
       isExecuting: false,
+      isPending: false,
+      hasSucceeded: false,
+      hasErrored: false,
+      hasNavigated: false,
+      result: {},
     });
 
     render(<ReloadPostsButton />);
@@ -32,8 +40,18 @@ describe("ReloadPostsButton Component", () => {
 
     vi.mocked(useAction).mockReturnValue({
       execute: mockExecute,
-      isPending: false,
+      executeAsync: vi.fn(),
+      input: undefined,
+      reset: vi.fn(),
+      isTransitioning: false,
+      status: "idle",
+      isIdle: true,
       isExecuting: false,
+      isPending: false,
+      hasSucceeded: false,
+      hasErrored: false,
+      hasNavigated: false,
+      result: {},
     });
 
     render(<ReloadPostsButton />);
@@ -47,8 +65,18 @@ describe("ReloadPostsButton Component", () => {
   it("should show spinner when loading", () => {
     vi.mocked(useAction).mockReturnValue({
       execute: vi.fn(),
+      executeAsync: vi.fn(),
+      input: undefined,
+      reset: vi.fn(),
+      isTransitioning: false,
+      status: "executing",
+      isIdle: false,
+      isExecuting: true,
       isPending: true,
-      isExecuting: false,
+      hasSucceeded: false,
+      hasErrored: false,
+      hasNavigated: false,
+      result: {},
     });
 
     render(<ReloadPostsButton />);
@@ -60,8 +88,18 @@ describe("ReloadPostsButton Component", () => {
   it("should show spinner when executing", () => {
     vi.mocked(useAction).mockReturnValue({
       execute: vi.fn(),
-      isPending: false,
+      executeAsync: vi.fn(),
+      input: undefined,
+      reset: vi.fn(),
+      isTransitioning: false,
+      status: "executing",
+      isIdle: false,
       isExecuting: true,
+      isPending: true,
+      hasSucceeded: false,
+      hasErrored: false,
+      hasNavigated: false,
+      result: {},
     });
 
     render(<ReloadPostsButton />);
