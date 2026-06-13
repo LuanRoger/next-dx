@@ -8,7 +8,10 @@ type PostsListProps = {
 
 export default function PostsList({ posts }: PostsListProps) {
   return (
-    <ScrollArea className="h-96 rounded-md bg-black px-4">
+    <ScrollArea
+      className="h-96 rounded-md bg-black px-4"
+      data-testid="scroll-area"
+    >
       <div className="my-2 flex flex-col space-y-2">
         {posts.map((post) => (
           <PostsListItem key={post.id} post={post} />

@@ -11,6 +11,9 @@
     "fix": "ultracite fix",
     "env:load": "varlock load",
     "components:add": "shadcn add",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
     "prepare": "lefthook install"
   },
   "dependencies": {
@@ -37,15 +40,22 @@
   "devDependencies": {
     "@biomejs/biome": "^2.5.0",
     "@tailwindcss/postcss": "^4.3.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^25.9.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "@vitest/coverage-v8": "^4.1.8",
     "babel-plugin-react-compiler": "1.0.0",
+    "jsdom": "^29.1.1",
     "lefthook": "^2.1.9",
     "skills": "^1.5.11",
     "tailwindcss": "^4.3.1",
     "typescript": "^6.0.3",
-    "ultracite": "^7.8.3"
+    "ultracite": "^7.8.3",
+    "vitest": "^4.1.8",
+    "vitest-browser-react": "^2.2.0"
   },
   "packageManager": "pnpm@11.5.0"
 }
