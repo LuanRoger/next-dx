@@ -1,4 +1,4 @@
-name: Pull Request - Build
+name: Pull Request - Check, Test & Build
 
 on:
   pull_request:
@@ -9,6 +9,20 @@ env:
   JSON_PLACEHOLDER_URL: https://jsonplaceholder.typicode.com
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Lint
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - run: pnpm install
+      - run: pnpm run check
+
   build:
     runs-on: ubuntu-latest
 
