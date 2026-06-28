@@ -13,6 +13,36 @@
       "skillPath": "skills/pnpm/SKILL.md",
       "computedHash": "d473204df25defd08a7d47b55c6d124b41ebde440b774995952b65223d0d8d6f"
     },
+    "safe-action-advanced": {
+      "source": "next-safe-action/skills",
+      "sourceType": "github",
+      "skillPath": "skills/safe-action-advanced/SKILL.md",
+      "computedHash": "a5f47b9bf259a72c0317571b9cfc19d709d65909ecbffa10808e79308315be78"
+    },
+    "safe-action-client": {
+      "source": "next-safe-action/skills",
+      "sourceType": "github",
+      "skillPath": "skills/safe-action-client/SKILL.md",
+      "computedHash": "532be9233d89721d10f0a73287c241bd4d7c3e4bb031d88c3cf455b34d41e8b1"
+    },
+    "safe-action-forms": {
+      "source": "next-safe-action/skills",
+      "sourceType": "github",
+      "skillPath": "skills/safe-action-forms/SKILL.md",
+      "computedHash": "91a9e56a4e1b219fecd314e007e6ddb15953e73e6fc976837229c15a9f13d81a"
+    },
+    "safe-action-hooks": {
+      "source": "next-safe-action/skills",
+      "sourceType": "github",
+      "skillPath": "skills/safe-action-hooks/SKILL.md",
+      "computedHash": "fb18ff5bed6516b245dec3512affde50c6dcbb69e6d14d0eb75846cde9c160cd"
+    },
+    "safe-action-testing": {
+      "source": "next-safe-action/skills",
+      "sourceType": "github",
+      "skillPath": "skills/safe-action-testing/SKILL.md",
+      "computedHash": "74fc9ce9138b705a1dcbf919d0d4a34f2209aaf276d8b6ff3962f4a377c867dc"
+    },
     "vercel-composition-patterns": {
       "source": "vercel-labs/agent-skills",
       "sourceType": "github",
