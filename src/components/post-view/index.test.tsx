@@ -71,7 +71,7 @@ describe("PostView Component", () => {
     render(Component);
 
     await waitFor(() => {
-      expect(screen.getByText("?userId=1")).toBeInTheDocument();
+      expect(getPosts).toHaveBeenCalledWith({ userId: 1 });
       expect(screen.getByText("User 1 Post")).toBeInTheDocument();
     });
   });
