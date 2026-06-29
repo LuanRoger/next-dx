@@ -1,7 +1,7 @@
 "use server";
 
 import { updateTag } from "next/cache";
-import { ENV } from "varlock/env";
+import { ENV } from "varlock";
 import { delay } from "@/lib/delay";
 import { actionClient } from "@/lib/safe-actions";
 import {

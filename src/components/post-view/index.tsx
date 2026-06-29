@@ -22,9 +22,7 @@ export default async function PostView({ userId }: PostViewProps) {
   return (
     <div className="flex flex-col gap-2">
       <p className="flex gap-2 font-mono text-muted-foreground">
-        <span>Last updated: {lastUpdate}</span>
-        <span>•</span>
-        <span>?userId={userId}</span>
+        Last updated: {lastUpdate}
       </p>
       <PostsList posts={result} />
     </div>
