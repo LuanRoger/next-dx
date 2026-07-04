@@ -5,13 +5,13 @@ import { ENV } from "varlock";
 import { delay } from "@/lib/delay";
 import { actionClient } from "@/lib/safe-actions";
 import {
-  getPostsInputSchema,
   getPostsQuerySerializer,
   getPostsResultSchema,
+  userPostsInputSchema,
 } from "./schemas";
 
 export const getPosts = actionClient
-  .inputSchema(getPostsInputSchema)
+  .inputSchema(userPostsInputSchema)
   .action(async ({ parsedInput }) => {
     const { userId } = parsedInput;
     const baseUrl = ENV.JSON_PLACEHOLDER_URL;
@@ -29,8 +29,11 @@ export const getPosts = actionClient
     return { result: resultSample, lastUpdate };
   });
 
-export const refreshPosts = actionClient.action(async () => {
-  await delay(1);
+export const refreshPosts = actionClient
+  .inputSchema(userPostsInputSchema)
+  .action(async ({ parsedInput }) => {
+    const { userId } = parsedInput;
+    await delay(1);
 
-  updateTag("posts");
-});
+    updateTag(`posts:${userId ?? "all"}`);
+  });

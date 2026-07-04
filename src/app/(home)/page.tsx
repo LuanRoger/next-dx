@@ -33,7 +33,7 @@ export default async function Page({ searchParams }: PageProps<"/">) {
         </Suspense>
       </CardContent>
       <CardFooter>
-        <ReloadPostsButton />
+        <ReloadPostsButton userId={userId ?? undefined} />
       </CardFooter>
     </Card>
   );
