@@ -11,10 +11,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import UserIdUpdate from "./components/user-id-update";
-import { pageSearchParamsLoader } from "./search-params";
+import { pageSearchParamsCache } from "./search-params";
 
 export default async function Page({ searchParams }: PageProps<"/">) {
-  const { userId } = await pageSearchParamsLoader(searchParams);
+  const { userId } = await pageSearchParamsCache.parse(searchParams, {
+    strict: true,
+  });
 
   return (
     <Card className="w-full lg:max-w-4xl">
