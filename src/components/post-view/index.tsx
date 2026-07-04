@@ -8,7 +8,7 @@ type PostViewProps = {
 
 export default async function PostView({ userId }: PostViewProps) {
   "use cache";
-  cacheTag("posts");
+  cacheTag(`posts:${userId ?? "all"}`);
 
   const posts = await getPosts({ userId });
 

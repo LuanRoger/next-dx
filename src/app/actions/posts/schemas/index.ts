@@ -1,7 +1,7 @@
 import { createSerializer, parseAsInteger } from "nuqs/server";
 import { z } from "zod";
 
-export const getPostsInputSchema = z.object({
+export const userPostsInputSchema = z.object({
   userId: z.number().optional(),
 });
 
