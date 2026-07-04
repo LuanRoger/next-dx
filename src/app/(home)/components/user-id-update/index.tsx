@@ -14,14 +14,20 @@ export default function UserIdUpdate() {
 
   function onSubmit(data: FormSchema) {
     const { userId } = data;
-    if (!userId) {
+
+    const trimedUserId = userId?.trim();
+    const isEmpty = !trimedUserId || trimedUserId === "";
+    if (isEmpty) {
       setUserIdQuery({ userId: null });
       return;
     }
 
-    const userIdNumber = Number.parseInt(userId, 10);
-    setUserIdQuery({ userId: userIdNumber });
+    const userIdNumber = Number.parseInt(trimedUserId, 10);
+
+    if (!Number.isNaN(userIdNumber)) {
+      setUserIdQuery({ userId: userIdNumber });
+    }
   }
 
-  return <UserIdForm onSubmit={onSubmit} userId={parsedUserId} />;
+  return <UserIdForm onSubmitAction={onSubmit} userId={parsedUserId} />;
 }
