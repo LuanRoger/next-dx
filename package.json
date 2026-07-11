@@ -54,7 +54,7 @@
     "lefthook": "^2.1.9",
     "skills": "^1.5.14",
     "tailwindcss": "^4.3.2",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "ultracite": "^7.8.4",
     "vitest": "^4.1.9",
     "vitest-browser-react": "^2.2.0"
