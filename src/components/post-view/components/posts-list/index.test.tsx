@@ -4,8 +4,8 @@ import PostsList from "./index";
 
 describe("PostsList Component", () => {
   const mockPosts = [
-    { id: 1, title: "First Post", body: "First body" },
-    { id: 2, title: "Second Post", body: "Second body" },
+    { body: "First body", id: 1, title: "First Post" },
+    { body: "Second body", id: 2, title: "Second Post" },
   ];
 
   it("should render a list of posts", () => {

@@ -17,11 +17,11 @@ export default function UserIdForm({
   onSubmitAction,
 }: UserIdFormProps) {
   const form = useForm<FormSchema>({
-    resolver: zodResolver(formSchema),
     defaultValues: {
       userId: userId ?? "",
     },
     mode: "onChange",
+    resolver: zodResolver(formSchema),
   });
 
   return (
@@ -34,6 +34,7 @@ export default function UserIdForm({
       <Controller
         control={form.control}
         name="userId"
+        // biome-ignore lint/performance/noJsxPropsBind: Need to render using the React Hook Form
         render={({ field, fieldState: { error } }) => (
           <Field>
             <FieldLabel htmlFor="userId">
@@ -47,7 +48,7 @@ export default function UserIdForm({
               aria-describedby={error ? "userId-error" : undefined}
               aria-invalid={!!error}
             />
-            {error && <FieldError>{error.message}</FieldError>}
+            {error !== undefined && <FieldError>{error.message}</FieldError>}
           </Field>
         )}
       />

@@ -13,9 +13,9 @@ export default function UserIdUpdate() {
   const parsedUserId = userId ? userId.toString() : undefined;
 
   function onSubmit(data: FormSchema) {
-    const { userId } = data;
+    const { userId: newUserId } = data;
 
-    const trimedUserId = userId?.trim();
+    const trimedUserId = newUserId?.trim();
     const isEmpty = !trimedUserId || trimedUserId === "";
     if (isEmpty) {
       setUserIdQuery({ userId: null });

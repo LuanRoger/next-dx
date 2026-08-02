@@ -4,9 +4,9 @@ import PostsListItem from "./index";
 
 describe("PostsListItem Component", () => {
   const mockPost = {
+    body: "Test post body content",
     id: 1,
     title: "Test Post Title",
-    body: "Test post body content",
   };
 
   it("should render post title and body", () => {

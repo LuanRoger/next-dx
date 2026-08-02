@@ -16,17 +16,17 @@ describe("ReloadPostsButton Component", () => {
     vi.mocked(useAction).mockReturnValue({
       execute: vi.fn(),
       executeAsync: vi.fn(),
-      input: undefined,
-      reset: vi.fn(),
-      isTransitioning: false,
-      status: "idle",
-      isIdle: true,
-      isExecuting: false,
-      isPending: false,
-      hasSucceeded: false,
       hasErrored: false,
       hasNavigated: false,
+      hasSucceeded: false,
+      input: undefined,
+      isExecuting: false,
+      isIdle: true,
+      isPending: false,
+      isTransitioning: false,
+      reset: vi.fn(),
       result: {},
+      status: "idle",
     });
 
     render(<ReloadPostsButton />);
@@ -41,17 +41,17 @@ describe("ReloadPostsButton Component", () => {
     vi.mocked(useAction).mockReturnValue({
       execute: mockExecute,
       executeAsync: vi.fn(),
-      input: undefined,
-      reset: vi.fn(),
-      isTransitioning: false,
-      status: "idle",
-      isIdle: true,
-      isExecuting: false,
-      isPending: false,
-      hasSucceeded: false,
       hasErrored: false,
       hasNavigated: false,
+      hasSucceeded: false,
+      input: undefined,
+      isExecuting: false,
+      isIdle: true,
+      isPending: false,
+      isTransitioning: false,
+      reset: vi.fn(),
       result: {},
+      status: "idle",
     });
 
     render(<ReloadPostsButton />);
@@ -66,17 +66,17 @@ describe("ReloadPostsButton Component", () => {
     vi.mocked(useAction).mockReturnValue({
       execute: vi.fn(),
       executeAsync: vi.fn(),
-      input: undefined,
-      reset: vi.fn(),
-      isTransitioning: false,
-      status: "executing",
-      isIdle: false,
-      isExecuting: true,
-      isPending: true,
-      hasSucceeded: false,
       hasErrored: false,
       hasNavigated: false,
+      hasSucceeded: false,
+      input: undefined,
+      isExecuting: true,
+      isIdle: false,
+      isPending: true,
+      isTransitioning: false,
+      reset: vi.fn(),
       result: {},
+      status: "executing",
     });
 
     render(<ReloadPostsButton />);
@@ -89,17 +89,17 @@ describe("ReloadPostsButton Component", () => {
     vi.mocked(useAction).mockReturnValue({
       execute: vi.fn(),
       executeAsync: vi.fn(),
-      input: undefined,
-      reset: vi.fn(),
-      isTransitioning: false,
-      status: "executing",
-      isIdle: false,
-      isExecuting: true,
-      isPending: true,
-      hasSucceeded: false,
       hasErrored: false,
       hasNavigated: false,
+      hasSucceeded: false,
+      input: undefined,
+      isExecuting: true,
+      isIdle: false,
+      isPending: true,
+      isTransitioning: false,
+      reset: vi.fn(),
       result: {},
+      status: "executing",
     });
 
     render(<ReloadPostsButton />);

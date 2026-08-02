@@ -10,10 +10,10 @@ export const getPostsQuerySerializer = createSerializer({
 });
 
 export const postSchema = z.object({
-  id: z.number(),
-  userId: z.number(),
-  title: z.string(),
   body: z.string(),
+  id: z.number(),
+  title: z.string(),
+  userId: z.number(),
 });
 
 export const getPostsResultSchema = z.array(postSchema);

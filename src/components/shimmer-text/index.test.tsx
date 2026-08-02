@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { ShimmerText } from "./index";
+import ShimmerText from "./index";
 
 describe("ShimmerText Component", () => {
   it("should render children text", () => {
