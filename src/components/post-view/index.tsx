@@ -1,12 +1,14 @@
 import { cacheTag } from "next/cache";
 import { getPosts } from "@/app/actions/posts";
+import { cn } from "@/lib/utils";
 import PostsList from "./components/posts-list";
 
 type PostViewProps = {
   userId?: number;
+  className?: string;
 };
 
-export default async function PostView({ userId }: PostViewProps) {
+export default async function PostView({ userId, className }: PostViewProps) {
   "use cache";
   cacheTag(`posts:${userId ?? "all"}`);
 
@@ -20,11 +22,11 @@ export default async function PostView({ userId }: PostViewProps) {
 
   const { result, lastUpdate } = posts.data;
   return (
-    <div className="flex flex-col gap-2">
+    <div className={cn("flex flex-col", className)}>
       <p className="flex gap-2 font-mono text-muted-foreground">
         Last updated: {lastUpdate}
       </p>
-      <PostsList posts={result} />
+      <PostsList className="min-h-0 flex-1" posts={result} />
     </div>
   );
 }
