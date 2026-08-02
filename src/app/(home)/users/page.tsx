@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import FooterNavigation from "@/components/footer-navigation";
 import {
   CardContent,
@@ -6,8 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import UsersList from "./components/users-list";
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <CardHeader>
@@ -17,7 +19,9 @@ export default function Page() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <h1>Users</h1>
+        <Suspense>
+          <UsersList />
+        </Suspense>
       </CardContent>
       <CardFooter className="justify-between">
         <FooterNavigation />
