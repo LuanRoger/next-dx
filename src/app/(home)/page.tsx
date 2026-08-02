@@ -1,9 +1,9 @@
 import { Suspense } from "react";
+import FooterNavigation from "@/components/footer-navigation";
 import PostView from "@/components/post-view";
 import PostViewLoading from "@/components/post-view/loading";
 import { ReloadPostsButton } from "@/components/reload-posts-button";
 import {
-  Card,
   CardContent,
   CardDescription,
   CardFooter,
@@ -19,7 +19,7 @@ export default async function Page({ searchParams }: PageProps<"/">) {
   });
 
   return (
-    <Card className="w-full lg:max-w-4xl">
+    <>
       <CardHeader>
         <CardTitle>Next.js DX</CardTitle>
         <CardDescription>
@@ -32,9 +32,10 @@ export default async function Page({ searchParams }: PageProps<"/">) {
           <PostView userId={userId ?? undefined} />
         </Suspense>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="justify-between">
         <ReloadPostsButton userId={userId ?? undefined} />
+        <FooterNavigation />
       </CardFooter>
-    </Card>
+    </>
   );
 }
