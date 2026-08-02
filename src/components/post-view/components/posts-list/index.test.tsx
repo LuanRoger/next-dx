@@ -30,10 +30,9 @@ describe("PostsList Component", () => {
   it("should have scrollable container", () => {
     render(<PostsList posts={mockPosts} />);
 
-    const scrollArea = screen.getByTestId("scroll-area", {
-      selector: '[data-slot="scroll-area"]',
-    });
-    expect(scrollArea).toHaveClass("h-96");
+    const scrollArea = screen.getByTestId("scroll-area");
     expect(scrollArea).toHaveClass("rounded-md");
+    expect(scrollArea).toHaveClass("bg-black");
+    expect(scrollArea).toHaveClass("px-4");
   });
 });

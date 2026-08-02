@@ -16,11 +16,12 @@ describe("PostsListItem Component", () => {
     expect(screen.getByText("Test post body content")).toBeInTheDocument();
   });
 
-  it("should render as an alert component", () => {
+  it("should render as a card component", () => {
     render(<PostsListItem post={mockPost} />);
 
-    const alert = screen.getByRole("alert");
-    expect(alert).toBeInTheDocument();
+    const card = screen.getByRole("listitem");
+    expect(card).toBeInTheDocument();
+    expect(card.firstChild).toHaveClass("group/card");
   });
 
   it("should have title and description structure", () => {
