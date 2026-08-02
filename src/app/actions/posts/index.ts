@@ -1,7 +1,7 @@
 "use server";
 
 import { updateTag } from "next/cache";
-import { ENV } from "varlock";
+import { ENV } from "varlock/env";
 import { delay } from "@/lib/delay";
 import { actionClient } from "@/lib/safe-actions";
 import {
@@ -26,7 +26,7 @@ export const getPosts = actionClient
     const parsedResult = getPostsResultSchema.parse(parsedJson);
     const resultSample = parsedResult.slice(0, 10);
 
-    return { result: resultSample, lastUpdate };
+    return { lastUpdate, result: resultSample };
   });
 
 export const refreshPosts = actionClient

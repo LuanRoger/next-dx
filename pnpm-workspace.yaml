@@ -36,5 +36,16 @@ minimumReleaseAgeExclude:
   - '@tailwindcss/postcss@4.3.1'
   - react-hook-form@7.79.0
   - tailwindcss@4.3.1
+  - '@hookform/resolvers@5.7.1'
+  - ultracite@7.10.0
+  - '@next/swc-darwin-arm64@16.3.0-canary.106'
+  - '@next/swc-darwin-x64@16.3.0-canary.106'
+  - '@next/swc-linux-arm64-gnu@16.3.0-canary.106'
+  - '@next/swc-linux-arm64-musl@16.3.0-canary.106'
+  - '@next/swc-linux-x64-gnu@16.3.0-canary.106'
+  - '@next/swc-linux-x64-musl@16.3.0-canary.106'
+  - '@next/swc-win32-arm64-msvc@16.3.0-canary.106'
+  - '@next/swc-win32-x64-msvc@16.3.0-canary.106'
+  - next@16.3.0-canary.106
 overrides:
   "@next/env": "npm:@varlock/nextjs-integration"

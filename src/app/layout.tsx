@@ -6,18 +6,18 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 
 const geistSans = Geist({
-  variable: "--font-sans",
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-mono",
   subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
-  title: "Next.js DX",
   description: "A better developer experience for Next.js",
+  title: "Next.js DX",
 };
 
 export default function RootLayout({

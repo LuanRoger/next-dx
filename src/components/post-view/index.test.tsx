@@ -37,11 +37,11 @@ describe("PostView Component", () => {
   it("should render posts when fetch is successful", async () => {
     const mockPosts = {
       data: {
-        result: [
-          { id: 1, title: "Test Post", body: "Test Body" },
-          { id: 2, title: "Another Post", body: "Another Body" },
-        ],
         lastUpdate: "2023-01-01",
+        result: [
+          { body: "Test Body", id: 1, title: "Test Post" },
+          { body: "Another Body", id: 2, title: "Another Post" },
+        ],
       },
     };
 
@@ -60,8 +60,8 @@ describe("PostView Component", () => {
   it("should filter posts by userId when provided", async () => {
     const mockPosts = {
       data: {
-        result: [{ id: 1, userId: 1, title: "User 1 Post", body: "Body" }],
         lastUpdate: "2023-01-01",
+        result: [{ body: "Body", id: 1, title: "User 1 Post", userId: 1 }],
       },
     };
 
