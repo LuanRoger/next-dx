@@ -16,7 +16,7 @@ export default function UsersListItem({ user }: UserListItemProps) {
 
   return (
     <li>
-      <Card>
+      <Card size="sm">
         <CardHeader>
           <CardTitle>
             {name}{" "}
