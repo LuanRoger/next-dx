@@ -1,9 +1,8 @@
-import { Suspense } from "react";
 import FooterNavigation from "@/components/footer-navigation";
 import PostView from "@/components/post-view";
-import PostViewLoading from "@/components/post-view/loading";
 import { ReloadPostsButton } from "@/components/reload-posts-button";
 import {
+  Card,
   CardContent,
   CardDescription,
   CardFooter,
@@ -19,23 +18,21 @@ export default async function Page({ searchParams }: PageProps<"/">) {
   });
 
   return (
-    <>
+    <Card className="h-180 w-full flex-col lg:max-w-4xl">
       <CardHeader>
         <CardTitle>Next.js DX</CardTitle>
         <CardDescription>
           A better developer experience for Next.js
         </CardDescription>
-      </CardHeader>
-      <CardContent>
         <UserIdUpdate />
-        <Suspense fallback={<PostViewLoading />}>
-          <PostView userId={userId ?? undefined} />
-        </Suspense>
+      </CardHeader>
+      <CardContent className="flex min-h-0 flex-1 flex-col">
+        <PostView className="min-h-0 flex-1" userId={userId ?? undefined} />
       </CardContent>
-      <CardFooter className="justify-between">
+      <CardFooter className="flex-none justify-between">
         <ReloadPostsButton userId={userId ?? undefined} />
         <FooterNavigation />
       </CardFooter>
-    </>
+    </Card>
   );
 }
