@@ -47,5 +47,10 @@ minimumReleaseAgeExclude:
   - '@next/swc-win32-arm64-msvc@16.3.0-canary.106'
   - '@next/swc-win32-x64-msvc@16.3.0-canary.106'
   - next@16.3.0-canary.106
+  - framer-motion@13.0.0
+  - motion-dom@13.0.0
+  - motion-utils@13.0.0
+  - motion@13.0.0
+  - nuqs@2.9.5
 overrides:
   "@next/env": "npm:@varlock/nextjs-integration"

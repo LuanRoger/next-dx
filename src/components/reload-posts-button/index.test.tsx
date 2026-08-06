@@ -25,7 +25,7 @@ describe("ReloadPostsButton Component", () => {
       isPending: false,
       isTransitioning: false,
       reset: vi.fn(),
-      result: {},
+      result: { data: undefined, serverError: undefined, validationErrors: {} },
       status: "idle",
     });
 
@@ -50,7 +50,7 @@ describe("ReloadPostsButton Component", () => {
       isPending: false,
       isTransitioning: false,
       reset: vi.fn(),
-      result: {},
+      result: { data: undefined, serverError: undefined, validationErrors: {} },
       status: "idle",
     });
 
@@ -75,7 +75,7 @@ describe("ReloadPostsButton Component", () => {
       isPending: true,
       isTransitioning: false,
       reset: vi.fn(),
-      result: {},
+      result: { data: undefined, serverError: undefined, validationErrors: {} },
       status: "executing",
     });
 
@@ -98,7 +98,7 @@ describe("ReloadPostsButton Component", () => {
       isPending: true,
       isTransitioning: false,
       reset: vi.fn(),
-      result: {},
+      result: { data: undefined, serverError: undefined, validationErrors: {} },
       status: "executing",
     });
 

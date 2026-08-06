@@ -20,8 +20,9 @@ describe("PostView Component", () => {
 
   it("should render error message when posts fetch fails", async () => {
     vi.mocked(getPosts).mockResolvedValue({
-      data: null,
-      validationErrors: ["Failed to fetch"],
+      data: undefined,
+      serverError: undefined,
+      validationErrors: { _errors: ["Failed to fetch"] },
     });
 
     const Component = await PostView({});
@@ -35,17 +36,19 @@ describe("PostView Component", () => {
   });
 
   it("should render posts when fetch is successful", async () => {
-    const mockPosts = {
-      data: {
-        lastUpdate: "2023-01-01",
-        result: [
-          { body: "Test Body", id: 1, title: "Test Post" },
-          { body: "Another Body", id: 2, title: "Another Post" },
-        ],
-      },
+    const mockResult = {
+      lastUpdate: "2023-01-01",
+      result: [
+        { body: "Test Body", id: 1, title: "Test Post", userId: 1 },
+        { body: "Another Body", id: 2, title: "Another Post", userId: 1 },
+      ],
     };
 
-    vi.mocked(getPosts).mockResolvedValue(mockPosts);
+    vi.mocked(getPosts).mockResolvedValue({
+      data: mockResult,
+      serverError: undefined,
+      validationErrors: undefined,
+    });
 
     const Component = await PostView({});
     render(Component);
@@ -58,14 +61,16 @@ describe("PostView Component", () => {
   });
 
   it("should filter posts by userId when provided", async () => {
-    const mockPosts = {
-      data: {
-        lastUpdate: "2023-01-01",
-        result: [{ body: "Body", id: 1, title: "User 1 Post", userId: 1 }],
-      },
+    const mockResult = {
+      lastUpdate: "2023-01-01",
+      result: [{ body: "Body", id: 1, title: "User 1 Post", userId: 1 }],
     };
 
-    vi.mocked(getPosts).mockResolvedValue(mockPosts);
+    vi.mocked(getPosts).mockResolvedValue({
+      data: mockResult,
+      serverError: undefined,
+      validationErrors: undefined,
+    });
 
     const Component = await PostView({ userId: 1 });
     render(Component);

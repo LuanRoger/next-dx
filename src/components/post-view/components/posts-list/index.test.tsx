@@ -4,8 +4,8 @@ import PostsList from "./index";
 
 describe("PostsList Component", () => {
   const mockPosts = [
-    { body: "First body", id: 1, title: "First Post" },
-    { body: "Second body", id: 2, title: "Second Post" },
+    { body: "First body", id: 1, title: "First Post", userId: 1 },
+    { body: "Second body", id: 2, title: "Second Post", userId: 1 },
   ];
 
   it("should render a list of posts", () => {
@@ -21,9 +21,7 @@ describe("PostsList Component", () => {
     render(<PostsList posts={[]} />);
 
     // Should not throw errors, just render empty scroll area
-    const scrollArea = screen.getByTestId("scroll-area", {
-      selector: '[data-slot="scroll-area"]',
-    });
+    const scrollArea = screen.getByTestId("scroll-area");
     expect(scrollArea).toBeInTheDocument();
   });
 
