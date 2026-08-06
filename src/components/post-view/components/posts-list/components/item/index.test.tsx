@@ -7,6 +7,7 @@ describe("PostsListItem Component", () => {
     body: "Test post body content",
     id: 1,
     title: "Test Post Title",
+    userId: 1,
   };
 
   it("should render post title and body", () => {
