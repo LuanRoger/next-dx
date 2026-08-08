@@ -55,7 +55,7 @@
     "skills": "^1.5.21",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
-    "ultracite": "^7.10.0",
+    "ultracite": "^7.10.1",
     "vitest": "^4.1.10",
     "vitest-browser-react": "^2.2.0"
   },
