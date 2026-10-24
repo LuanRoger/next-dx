@@ -270,8 +270,8 @@ importers:
         specifier: ^2.2.2
         version: 2.2.2
       skills:
-        specifier: ^1.7.2
-        version: 1.7.2
+        specifier: ^1.7.4
+        version: 1.7.4
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
@@ -3509,8 +3509,8 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  skills@1.7.2:
-    resolution: {integrity: sha512-j+GzyF/oNahsjjjup6y3lJpFkC1lQjIkf4kAMXICA1hboBqi0fAGXAGoE4x9FRZiP1br/YE9+L3/Tqq6PIAe0A==}
+  skills@1.7.4:
+    resolution: {integrity: sha512-lHZJksE8UImNAr+LL6unqq7jERjdFw5EJasm17srycwL7rXHGdCmgu1L1ttLxUO9i3rdH+QQig+px0icHqLmRw==}
     engines: {node: '>=22.20.0'}
     hasBin: true
 
@@ -7064,7 +7064,7 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  skills@1.7.2:
+  skills@1.7.4:
     dependencies:
       tar: 7.5.22
       yaml: 2.9.1
