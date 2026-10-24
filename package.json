@@ -22,7 +22,7 @@
     "@varlock/nextjs-integration": "^1.2.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^1.58.0",
+    "lucide-react": "^1.61.0",
     "motion": "^14.2.0",
     "next": "16.4.2",
     "next-safe-action": "^8.7.3",
