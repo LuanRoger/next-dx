@@ -17,7 +17,7 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.9.1",
+    "@hookform/resolvers": "^6.0.0",
     "@next-safe-action/adapter-react-hook-form": "^2.1.0",
     "@varlock/nextjs-integration": "^1.2.5",
     "class-variance-authority": "^0.7.1",
